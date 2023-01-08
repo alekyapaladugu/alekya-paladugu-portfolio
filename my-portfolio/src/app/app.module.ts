@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileModule } from './profile/profile.module';
+import { FormsModule } from '@angular/forms';
 // const routes: Routes = [
 //   {
 //     path: ' ',
@@ -18,6 +19,7 @@ import { ProfileModule } from './profile/profile.module';
     BrowserModule,
     AppRoutingModule,
     ProfileModule,
+    FormsModule,
     // RouterModule.forRoot(routes, {
     //   initialNavigation: 'enabled',
     // }),
