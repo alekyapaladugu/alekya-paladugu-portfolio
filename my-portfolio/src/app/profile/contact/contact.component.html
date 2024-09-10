@@ -10,16 +10,14 @@
       <div class="cc-contact">
         <div class="row">
           <div class="col-md-9">
-            <div class="card mb-0" data-aos="zoom-in">
-              <div class="h4 text-center title">Contact Me</div>
+            <div class="card mb-0 p-sm-3" data-aos="zoom-in">
+              <div class="h4 text-center title">
+                Grab a Coffee and Let's Connect ☕
+              </div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="card-body">
-                    <form
-                      (ngSubmit)="(f.form.valid); f.resetForm()"
-                      #f="ngForm"
-                      novalidate
-                    >
+                    <form (ngSubmit)="sendEmail()" #f="ngForm">
                       <div class="p pb-3">
                         <strong>Feel free to contact me </strong>
                       </div>
@@ -42,6 +40,12 @@
                               required
                             />
                           </div>
+                          <div
+                            *ngIf="name.invalid && name.touched"
+                            class="text-danger"
+                          >
+                            Name is required.
+                          </div>
                         </div>
                       </div>
                       <div class="row mb-3">
@@ -62,6 +66,12 @@
                               }"
                               required
                             />
+                          </div>
+                          <div
+                            *ngIf="subject.invalid && subject.touched"
+                            class="text-danger"
+                          >
+                            Subject is required.
                           </div>
                         </div>
                       </div>
@@ -85,6 +95,12 @@
                               required
                             />
                           </div>
+                          <div
+                            *ngIf="email.invalid && email.touched"
+                            class="text-danger"
+                          >
+                            Enter Valid email-id
+                          </div>
                         </div>
                       </div>
                       <div class="row mb-3">
@@ -102,11 +118,21 @@
                               required
                             ></textarea>
                           </div>
+                          <div
+                            *ngIf="message.invalid && message.touched"
+                            class="text-danger"
+                          >
+                            Message is required.
+                          </div>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col">
-                          <button class="btn btn-primary" type="submit">
+                          <button
+                            class="btn btn-primary"
+                            [disabled]="f.invalid"
+                            type="submit"
+                          >
                             Send
                           </button>
                         </div>
@@ -119,7 +145,7 @@
                     <p class="mb-0">
                       <strong>Phone</strong>
                     </p>
-                    <p class="pb-2">+91 7799260360</p>
+                    <p class="pb-2">9167935988</p>
                     <p class="mb-0">
                       <strong>Email</strong>
                     </p>

@@ -7,32 +7,61 @@ import { Observable } from 'rxjs';
 export class ProfileService {
   constructor() {}
 
-  about2 = `Software Developer with 3.5 years of experience .  
+  about2 = `Software Developer with 5 years of experience .  
   Worked with Software Development Life Cycle(SDLC) and  agile methodologies .
-  Expertise in Angular 12, Javascript,  jQuery and UI with Responsive Designs .
-  Have good understanding of Bootstrap, MYSQL`;
+  Expertise in Javascript, React, Angular, jQuery and UI with Responsive Designs .
+ Have good understanding of Python, Flask, SQLAlchemy, Microsoft SQL Server.`;
   about =
     'Lover of innovation and everything related to generate new knowledge.Face problems with a smile and solve them as soon as possible. Very calculated about the time I spend and work I do.';
 
   exprienceData: any = [
     {
       id: 1,
+      company: 'Office of Water Programs,',
+      location: 'California',
+      timeline: 'Oct 2023 to Present',
+      role: 'Software Engineer',
+      work: `Technologies : JavaScript, React, Python, Flask, SQLAlchemy, MSSQL Server . 
+      Developed website from scratch for the State Water Board of California for detection of PFAS chemical in water using React, Material UI, and Tailwind CSS, improving user interface consistency .
+      Created high-performance REST APIs with Python, Flask, and MSSQL utilizing SQLAlchemy to optimize database operations for improved efficiency and scalability .
+      Improved SQL Server join operations and boosted database query efficiency by 60% through the implementation of indexes on frequently queried columns, enhancing overall feature performance .
+      Proposed and implemented the Render Prop design pattern and custom hooks, significantly enhancing code reusability and maintainability across the project.`,
+    },
+    {
+      id: 2,
       company: 'Accenture',
-      location: 'Hyderabad',
-      timeline: 'Nov 2018 to May 2022',
-      role: 'Frontend  Developer',
-      work: `Technologies : JavaScript, Angular 12 , jQuery , HTML, CSS, Bootstrap . 
-      3.5 years of experience in developing E-commerce web applications using HTML, CSS and JavaScript .
-      Experience in developing Single Page Applications using Angular with no compromise in accessibility by using ARIA .
-      Developed Components dynamically by populating data from REST APIs using RxJS .
-      Used KendoUI for creating grids, dropdowns, datepicker .
-      Experience in understanding user story from Product Manager & UX Engineer and develop features that meet all acceptance criteria of Product Owner .
-      Implemented dynamic pages by using jQuery and making AJAX calls to the REST APIs .
-      Was a key player in the Performance team for improving the stability of the websites .
-      Designed pixel-perfect, robust and accessible user interfaces on the web with high quality .
-      Developed responsive websites that adjust depending on the screen size .
-      Worked in pushing or deleting objects on occurrence of user events for Analytics .
-      Involved in Code Debugging and pushing defect fix with high performance environment. `,
+      location: 'India',
+      timeline: 'Dec 2021 to May 2022',
+      role: 'Application Development Senior Analyst',
+      work: `Technologies : JavaScript, Spartacus, SAP Hybris, Angular, HTML, CSS, KendoUI . 
+      Led the development of Heineken Mexico storefront playing a pivotal role in Sprint Planning and estimation of User stories following Agile Principles .
+      Participated in digitalizing Heineken B2B enterprise using SAP Commerce Cloud Solution enabling advanced CRM and delivered engaging shopping experiences across multiple channels (web,tablet and mobile) .
+      Migrated Intel Web Order Management (WOM) legacy storefront to Spartacus Angular Storefront and leveraged the SAP Commerce Cloud CMS tool, SmartEdit for page content providing personalized customer experience .
+      Mentored and guided 2 junior developers, performing thorough code reviews to uphold best practices and coding standards .
+      Collaborated closely with product managers and key stakeholders to define and prioritize project requirements, driving alignment and execution for a development team of 7 members.`,
+    },
+    {
+      id: 3,
+      company: 'Accenture',
+      location: 'India',
+      timeline: 'Nov 2020 to Dec 2021',
+      role: 'Digital Tech Developer Analyst',
+      work: `Technologies : JavaScript, Spartacus, SAP Hybris, Angular, HTML, CSS, KendoUI . 
+      Spearheaded the development of Single Page Applications using HTML5, CSS3, and JavaScript, with expertise in Angular and React frameworks, enhancing user experience and application performance .
+      Participated in agile development processes, including sprint planning, daily stand-ups, and retrospective meetings, which improved team collaboration and project delivery timelines .
+      Created a global stylesheet (colors, dropdowns, search dropdowns, favorites, links, forms) for maintaining consistency across pages of websites that led to a reduction in duplication of code by 60% and improved code reuse .
+      Achieved a 50% boost in page speed by eliminating redundant AJAX API calls, implementing lazy loading of images, refactoring code, and compressing resources using tools like Webpack `,
+    },
+    {
+      id: 4,
+      company: 'Accenture',
+      location: 'India',
+      timeline: 'Nov 2018 to Nov 2020',
+      role: 'Associate Software Engineer',
+      work: `Technologies : JavaScript, Spartacus, SAP Hybris, Angular, HTML, CSS, KendoUI . 
+      Developed MEAN and MERN applications during training, enhancing skills in JavaScript frameworks and improving code quality .
+      Implemented pages using JavaScript, jQuery, and AJAX calls to APIs, improving user interaction and page load times .
+      Debugged code and pushed defect fixes, ensuring high performance and reliability in the software`,
     },
   ];
 
@@ -43,22 +72,53 @@ export class ProfileService {
   skillsData: any = [
     {
       id: '1',
-      skill: 'ANGULAR 12',
-      progress: '85%',
-    },
-    {
-      id: '2',
-      skill: 'JAVASCRIPT JQUERY',
+      skill: 'JAVASCRIPT',
       progress: '80%',
     },
     {
-      id: '3',
-      skill: 'HTML',
-      progress: '75%',
+      id: '2',
+      skill: 'REACT',
+      progress: '70%',
     },
     {
-      id: '2',
+      id: '3',
+      skill: 'ANGULAR',
+      progress: '70%',
+    },
+    {
+      id: '4',
+      skill: 'NODE',
+      progress: '60%',
+    },
+
+    {
+      id: '5',
+      skill: 'JQUERY',
+      progress: '70%',
+    },
+    {
+      id: '6',
+      skill: 'HTML',
+      progress: '80%',
+    },
+    {
+      id: '7',
       skill: 'CSS',
+      progress: '80%',
+    },
+    {
+      id: '8',
+      skill: 'PYTHON',
+      progress: '60%',
+    },
+    {
+      id: '9',
+      skill: 'FLASK',
+      progress: '60%',
+    },
+    {
+      id: '10',
+      skill: 'SQL SERVER',
       progress: '70%',
     },
   ];
