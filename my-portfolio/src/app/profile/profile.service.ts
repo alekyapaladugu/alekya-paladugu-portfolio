@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Tag } from '../_models/Tag';
+import { Project } from '../_models/Project';
 
 @Injectable({
   providedIn: 'root',
@@ -125,5 +127,51 @@ export class ProfileService {
 
   skills(): Observable<any> {
     return this.skillsData;
+  }
+
+  projects: Project[] = [
+    {
+      id: 0,
+      name: 'FlowMail',
+      summary:
+        'Developed an email assistant outlook add-in to support students in drafting academically appropriate emails.',
+      description: '',
+      projectLink: 'https://github.com/alekyapaladugu/FlowMail',
+      pictures: [],
+      tags: [Tag.JAVASCRIPT, Tag.FLASK, Tag.LLM],
+    },
+    {
+      id: 2,
+      name: 'Multi-Label Text Classification of toxic comment dataset',
+      summary:
+        'Designed the base model of a paper that uses Multi-label Text classification using Attention based Graph Neural Network.',
+      description: '',
+      projectLink:
+        'https://github.com/alekyapaladugu/multilabel_text_classification',
+      pictures: [],
+      tags: [Tag.PYTHON, Tag.PYTORCH, Tag.BERT],
+    },
+    {
+      id: 3,
+      name: 'CRUD Operations on Redis Enterprise Cloud',
+      summary:
+        'Implemented a dashboard using JavaScript, chart.js for showing the analysis of FIFA world cup dataset. ',
+      description: '',
+      projectLink: 'https://github.com/alekyapaladugu/redis-backend',
+      pictures: [],
+      tags: [Tag.JAVASCRIPT, Tag.FLASK, Tag.REDIS],
+    },
+  ];
+
+  GetProjects() {
+    return this.projects;
+  }
+
+  GetProjectById(id: number): Project {
+    let project = this?.projects?.find((project) => project?.id === id);
+    if (project === undefined) {
+      throw new TypeError('There is no project that matches.' + id);
+    }
+    return project;
   }
 }

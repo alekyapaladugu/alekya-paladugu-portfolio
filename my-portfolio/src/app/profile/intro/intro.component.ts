@@ -10,6 +10,6 @@ export class IntroComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.cvUrl = '.././assets/media/alekya full job resume.pdf';
+    this.cvUrl = '.././assets/media/AlekyaPaladugu_resume.pdf';
   }
 }

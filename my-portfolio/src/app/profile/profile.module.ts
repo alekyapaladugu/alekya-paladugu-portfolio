@@ -11,6 +11,7 @@ import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectCardComponent } from './projectCard/project-card/project-card.component';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -23,6 +24,7 @@ import { ProjectsComponent } from './projects/projects.component';
     EducationComponent,
     ContactComponent,
     ProjectsComponent,
+    ProjectCardComponent,
   ],
   imports: [CommonModule, FormsModule],
   exports: [ProfileComponent, SplitPipe],

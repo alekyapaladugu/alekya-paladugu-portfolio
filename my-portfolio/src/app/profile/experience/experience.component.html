@@ -10,23 +10,29 @@
               class="timeline-entry animate-box"
               data-animate-effect="fadeInLeft"
             >
-              <div class="timeline-entry-inner">
-                <div class="timeline-icon color-2">
-                  <i class="icon-pen2"></i>
-                </div>
+              <div
+                class="aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+              >
+                <div class="timeline-entry-inner">
+                  <div class="timeline-icon color-2">
+                    <i class="icon-pen2"></i>
+                  </div>
 
-                <div class="timeline-label">
-                  <h2>
-                    {{ exp.company
-                    }}<span
-                      >- &nbsp;{{ exp.timeline }}, {{ exp.location }}</span
-                    >
-                  </h2>
-                  <h4>{{ exp.role }}</h4>
+                  <div class="timeline-label">
+                    <h2>
+                      {{ exp.company
+                      }}<span
+                        >- &nbsp;{{ exp.timeline }}, {{ exp.location }}</span
+                      >
+                    </h2>
+                    <h4>{{ exp.role }}</h4>
 
-                  <ul>
-                    <li *ngFor="let work of exp.work | split">{{ work }}</li>
-                  </ul>
+                    <ul>
+                      <li *ngFor="let work of exp.work | split">{{ work }}</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </article>
