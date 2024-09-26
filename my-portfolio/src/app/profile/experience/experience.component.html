@@ -1,42 +1,60 @@
-<div class="section" id="experience">
+<div class="section experience_section" id="experience">
   <div class="container cc-education">
-    <div class="h4 text-center mb-4 title">Work Experience</div>
-    <div class="colorlib-narrow-content">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="timeline-centered">
-            <article
-              *ngFor="let exp of workexp"
-              class="timeline-entry animate-box"
-              data-animate-effect="fadeInLeft"
-            >
-              <div
-                class="aos-init aos-animate"
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
+    <h2 class="h4 mb-4 text-center title">Experience</h2>
+    <div class="timeline-container">
+      <div class="timeline">
+        <!-- Timeline Block 1 (Left on large screens, right on smaller screens) -->
+        <div
+          class="timeline-block"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          [attr.data-aos-delay]="600"
+        >
+          <div class="timeline-content">
+            <h2 class="position h5">Software Engineer</h2>
+            <h3 class="company">
+              <a
+                class="company_link"
+                href="https://www.owp.csus.edu/"
+                target="_blank"
+                >Office of Water Programs</a
               >
-                <div class="timeline-entry-inner">
-                  <div class="timeline-icon color-2">
-                    <i class="icon-pen2"></i>
-                  </div>
-
-                  <div class="timeline-label">
-                    <h2>
-                      {{ exp.company
-                      }}<span
-                        >- &nbsp;{{ exp.timeline }}, {{ exp.location }}</span
-                      >
-                    </h2>
-                    <h4>{{ exp.role }}</h4>
-
-                    <ul>
-                      <li *ngFor="let work of exp.work | split">{{ work }}</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </article>
+            </h3>
+            <p class="job-desc">
+              Working as a Fullstack Developer at Office of Water Programs.
+              Developed website for the State Water Board of California for the
+              detection of PFAS in water using React, Material UI, and Tailwind
+              CSS, improving user interface consistency.Created RESTful APIs in
+              JSON format with Python, Flask, SQLAlchemy and utilized MSSQL
+              server for efficient database operations.
+            </p>
           </div>
+          <div class="timeline-img">
+            <div class="sprite research"></div>
+          </div>
+          <span class="date">oct 2023 - present</span>
+        </div>
+
+        <!-- Timeline Block 2 (Right on large screens, right on smaller screens) -->
+        <div
+          class="timeline-block"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          [attr.data-aos-delay]="600"
+        >
+          <div class="timeline-content">
+            <h2 class="position">Creative Technologist Co-op</h2>
+            <h3 class="company"><a href="#">MullenLowe U.S.</a></h3>
+            <p class="job-desc">
+              Developed and maintained code for in-house and client websites.
+              Tested front-end code in various browsers and mobile devices to
+              ensure cross-browser compatibility and responsiveness.
+            </p>
+          </div>
+          <div class="timeline-img">
+            <div class="sprite co-op"></div>
+          </div>
+          <span class="date">July - Dec 2015</span>
         </div>
       </div>
     </div>

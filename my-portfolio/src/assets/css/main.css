@@ -35,8 +35,8 @@
 .show > .navbar .navbar-nav > a.btn.dropdown-toggle,
 .show > .navbar .navbar-nav > a.btn.dropdown-toggle:focus,
 .show > .navbar .navbar-nav > a.btn.dropdown-toggle:hover {
-  background-color: rgb(19, 106, 150);
-  color: #ffffff;
+  background-color: rgb(233 255 0 / 82%);
+  color: #000;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -222,8 +222,8 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
 }
 
 .btn-primary {
-  background-color: rgb(21, 70, 95);
-  color: #ffffff;
+  background-color: rgb(233 255 0 / 82%);
+  color: #000;
 }
 
 .btn-primary:hover,
@@ -237,15 +237,15 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
 .show > .btn-primary.dropdown-toggle,
 .show > .btn-primary.dropdown-toggle:focus,
 .show > .btn-primary.dropdown-toggle:hover {
-  background-color: rgb(19, 106, 150);
-  color: #ffffff;
+  background-color: rgb(233 255 0 / 82%);
+  color: #000;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .btn-primary:hover {
-  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0 3px 8px 0 rgb(233 255 0 / 82%)
+  box-shadow: 0 3px 8px 0 rgb(233 255 0 / 82%)
 }
 
 .btn-primary.disabled,
@@ -272,8 +272,8 @@ fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary.active {
-  background-color: rgb(19, 106, 150);
-  border-color: rgb(19, 106, 150);
+  background-color: rgb(233 255 0 / 82%)
+  border-color: rgb(233 255 0 / 82%)
   cursor: default;
 }
 
@@ -2128,7 +2128,7 @@ body {
 }
 
 .bg-primary {
-  background-color: #00334d !important;
+  background-color: #343535 !important;
 }
 
 .bg-info {
@@ -3429,7 +3429,7 @@ img {
 }
 
 .profile-page .page-header {
-  min-height: 550px;
+  min-height: 100vh;
 }
 
 .profile-page .profile-container {
@@ -3566,11 +3566,6 @@ img {
 .page-header .category,
 .page-header .description {
   color: rgba(255, 255, 255, 0.5);
-}
-
-.page-header.page-header-small {
-  height: 60vh;
-  max-height: 440px;
 }
 
 .page-header:after,

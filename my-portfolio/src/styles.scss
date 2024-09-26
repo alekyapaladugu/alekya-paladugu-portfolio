@@ -21,3 +21,29 @@ span {
   font-size: 19px;
   font-weight: bold;
 }
+
+#projects {
+  .carousel .carousel-inner {
+    box-shadow: none !important;
+    -webkit-box-shadow: none;
+  }
+}
+
+.highlight {
+  color: rgba(233 255 0 / 82%);
+}
+.highlight:hover {
+  color: rgba(234, 255, 0, 0.952);
+}
+.highlight:focus {
+  color: rgba(234, 255, 0, 0.952);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

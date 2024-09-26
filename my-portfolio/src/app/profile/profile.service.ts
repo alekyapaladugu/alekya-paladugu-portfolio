@@ -9,66 +9,36 @@ import { Project } from '../_models/Project';
 export class ProfileService {
   constructor() {}
 
-  about2 = `Software Developer with 5 years of experience .  
-  Worked with Software Development Life Cycle(SDLC) and  agile methodologies .
-  Expertise in Javascript, React, Angular, jQuery and UI with Responsive Designs .
- Have good understanding of Python, Flask, SQLAlchemy, Microsoft SQL Server.`;
-  about =
-    'Lover of innovation and everything related to generate new knowledge.Face problems with a smile and solve them as soon as possible. Very calculated about the time I spend and work I do.';
+  getAboutInfo(): string[] {
+    return [
+      `<p class="about-text">With 5 years of Software Development experience, currently crafting solutions for environmental health 
+      at the Office of Water Programs, my work as a Full Stack Developer involves building web applications 
+      that detect harmful chemicals in water resources. With a focus on <span class="highlight">React</span>, 
+      Tailwind CSS, and JavaScript, I bring innovative approaches to frontend creation. Meanwhile, 
+      Python, Flask, and MSSQL underpin a robust backend system.Our collaborative efforts support the 
+      California State Water Resources Control Board's mission to ensure water safety.</p>`,
 
-  exprienceData: any = [
-    {
-      id: 1,
-      company: 'Office of Water Programs,',
-      location: 'California',
-      timeline: 'Oct 2023 to Present',
-      role: 'Software Engineer',
-      work: `Technologies : JavaScript, React, Python, Flask, SQLAlchemy, MSSQL Server . 
-      Developed website from scratch for the State Water Board of California for detection of PFAS chemical in water using React, Material UI, and Tailwind CSS, improving user interface consistency .
-      Created high-performance REST APIs with Python, Flask, and MSSQL utilizing SQLAlchemy to optimize database operations for improved efficiency and scalability .
-      Improved SQL Server join operations and boosted database query efficiency by 60% through the implementation of indexes on frequently queried columns, enhancing overall feature performance .
-      Proposed and implemented the Render Prop design pattern and custom hooks, significantly enhancing code reusability and maintainability across the project.`,
-    },
-    {
-      id: 2,
-      company: 'Accenture',
-      location: 'India',
-      timeline: 'Dec 2021 to May 2022',
-      role: 'Application Development Senior Analyst',
-      work: `Technologies : JavaScript, Spartacus, SAP Hybris, Angular, HTML, CSS, KendoUI . 
-      Led the development of Heineken Mexico storefront playing a pivotal role in Sprint Planning and estimation of User stories following Agile Principles .
-      Participated in digitalizing Heineken B2B enterprise using SAP Commerce Cloud Solution enabling advanced CRM and delivered engaging shopping experiences across multiple channels (web,tablet and mobile) .
-      Migrated Intel Web Order Management (WOM) legacy storefront to Spartacus Angular Storefront and leveraged the SAP Commerce Cloud CMS tool, SmartEdit for page content providing personalized customer experience .
-      Mentored and guided 2 junior developers, performing thorough code reviews to uphold best practices and coding standards .
-      Collaborated closely with product managers and key stakeholders to define and prioritize project requirements, driving alignment and execution for a development team of 7 members.`,
-    },
-    {
-      id: 3,
-      company: 'Accenture',
-      location: 'India',
-      timeline: 'Nov 2020 to Dec 2021',
-      role: 'Digital Tech Developer Analyst',
-      work: `Technologies : JavaScript, Spartacus, SAP Hybris, Angular, HTML, CSS, KendoUI . 
-      Spearheaded the development of Single Page Applications using HTML5, CSS3, and JavaScript, with expertise in Angular and React frameworks, enhancing user experience and application performance .
-      Participated in agile development processes, including sprint planning, daily stand-ups, and retrospective meetings, which improved team collaboration and project delivery timelines .
-      Created a global stylesheet (colors, dropdowns, search dropdowns, favorites, links, forms) for maintaining consistency across pages of websites that led to a reduction in duplication of code by 60% and improved code reuse .
-      Achieved a 50% boost in page speed by eliminating redundant AJAX API calls, implementing lazy loading of images, refactoring code, and compressing resources using tools like Webpack `,
-    },
-    {
-      id: 4,
-      company: 'Accenture',
-      location: 'India',
-      timeline: 'Nov 2018 to Nov 2020',
-      role: 'Associate Software Engineer',
-      work: `Technologies : JavaScript, Spartacus, SAP Hybris, Angular, HTML, CSS, KendoUI . 
-      Developed MEAN and MERN applications during training, enhancing skills in JavaScript frameworks and improving code quality .
-      Implemented pages using JavaScript, jQuery, and AJAX calls to APIs, improving user interaction and page load times .
-      Debugged code and pushed defect fixes, ensuring high performance and reliability in the software`,
-    },
-  ];
+      `<p class="about-text">As a Master of Science candidate in Computer Science at California State University-Sacramento, 
+      I'm sharpening my expertise in data structures, algorithms, and database management systems. 
+      This academic foundation complements my hands-on experience, where I proactively address technical 
+      challenges and contribute to the advancement of web technologies. Motivated by a commitment to 
+      societal betterment, I continuously explore new technologies to enhance our digital world.</p>`,
 
-  experience(): Observable<any> {
-    return this.exprienceData;
+      `<p class="about-text">Here are a few technologies I’ve been working with recently:<br><br>
+        <ul class="tech-list">
+        <div>
+          <li>JavaScript (ES6+)</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          </div>
+          <div>
+          <li>Python</li>
+          <li>SQL Alchemy</li>
+          <li>Microsoft SQL Server</li>
+          </div>
+        </ul>
+      </p>`,
+    ];
   }
 
   skillsData: any = [
@@ -135,9 +105,14 @@ export class ProfileService {
       name: 'FlowMail',
       summary:
         'Developed an email assistant outlook add-in to support students in drafting academically appropriate emails.',
-      description: '',
+      description:
+        'I developed an Outlook email assistant add-in designed to help students draft academically appropriate emails with greater ease and professionalism. The project was aimed at improving communication between students and academic staff by providing assistance in structuring emails, ensuring proper tone, and responding to common queries.  Leveraged Large Language Models (LLMs) to suggest and generate well-structured email drafts based on the context provided by the student. This feature helped students write clear and formal emails when addressing professors, requesting information, or following up on academic matters. Provided a set of predefined templates for frequently asked questions, such as, Extensions on assignments, Inquiries about course materials. Utilized the Yeoman generator to scaffold the Outlook add-in, ensuring a streamlined development process for the add-in’s UI and core functionality. Designed an easy-to-use interface within Outlook where students could choose templates, input relevant details, and let the LLM refine the language and tone of their message. Implemented features that allowed the LLM to take into account the email context, such as the subject, recipient, and specific query, to tailor suggestions and ensure the content aligns with academic norms.',
       projectLink: 'https://github.com/alekyapaladugu/FlowMail',
-      pictures: [],
+      pictures: [
+        '../../assets/images/outlook_addin.jpeg',
+        '../../assets/images/machine_learning.jpeg',
+        '../../assets/images/redis_db.jpeg',
+      ],
       tags: [Tag.JAVASCRIPT, Tag.FLASK, Tag.LLM],
     },
     {
@@ -145,20 +120,30 @@ export class ProfileService {
       name: 'Multi-Label Text Classification of toxic comment dataset',
       summary:
         'Designed the base model of a paper that uses Multi-label Text classification using Attention based Graph Neural Network.',
-      description: '',
+      description:
+        "I along with my peers designed and developed the base model for a research paper focusing on Multi-label Text Classification using an Attention-based Graph Neural Network (GNN). The primary objective was to classify textual data into multiple categories, leveraging the graph structure to capture relationships between labels and input text features. The attention mechanism was used to dynamically weigh the importance of different parts of the input text, improving the classification accuracy by allowing the model to focus on the most relevant sections. After building the GNN model, I further enhanced the model's performance by integrating a BERT transformer. BERT (Bidirectional Encoder Representations from Transformers) was applied to the same dataset to capture contextual information from the text more effectively. By replacing the traditional text representation with BERT embeddings, I managed to boost the base model's accuracy by 0.5%, demonstrating the powerful contextual understanding that transformers provide for natural language processing tasks.",
       projectLink:
         'https://github.com/alekyapaladugu/multilabel_text_classification',
-      pictures: [],
+      pictures: [
+        '../../assets/images/outlook_addin.jpeg',
+        '../../assets/images/machine_learning.jpeg',
+        '../../assets/images/redis_db.jpeg',
+      ],
       tags: [Tag.PYTHON, Tag.PYTORCH, Tag.BERT],
     },
     {
       id: 3,
       name: 'CRUD Operations on Redis Enterprise Cloud',
       summary:
-        'Implemented a dashboard using JavaScript, chart.js for showing the analysis of FIFA world cup dataset. ',
-      description: '',
+        'Implemented a dashboard for showing the analysis of FIFA world cup dataset.',
+      description:
+        'I developed an interactive dashboard using JavaScript and Chart.js to visualize and analyze data from the FIFA World Cup dataset, while integrating a Flask backend for data management through GET and POST APIs. The project involved creating a full-stack solution where the frontend dashboard provided dynamic data visualization, and the backend enabled data persistence and CRUD operations. Integrated an ORM (Object Relational Mapping) layer to interact with a Redis database, ensuring efficient data storage and retrieval. ',
       projectLink: 'https://github.com/alekyapaladugu/redis-backend',
-      pictures: [],
+      pictures: [
+        '../../assets/images/outlook_addin.jpeg',
+        '../../assets/images/machine_learning.jpeg',
+        '../../assets/images/redis_db.jpeg',
+      ],
       tags: [Tag.JAVASCRIPT, Tag.FLASK, Tag.REDIS],
     },
   ];

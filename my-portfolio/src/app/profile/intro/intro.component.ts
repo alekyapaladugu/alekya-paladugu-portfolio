@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-intro',
@@ -11,5 +12,17 @@ export class IntroComponent implements OnInit {
 
   ngOnInit(): void {
     this.cvUrl = '.././assets/media/AlekyaPaladugu_resume.pdf';
+    const options = {
+      strings: [
+        'Software Engineer',
+        'Frontend Developer',
+        "Computer Science Master's student",
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    };
+
+    const typed = new Typed('#typed-text', options);
   }
 }

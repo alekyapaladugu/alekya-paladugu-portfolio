@@ -1,0 +1,207 @@
+// /* Styling for the About Me Text */
+.about-text {
+  font-size: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.heading {
+  padding-top: 10px;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #282c34;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.info-section {
+  width: 45%;
+  color: #fff;
+}
+
+.basic-info {
+  margin-top: 20px;
+}
+
+.about-me-text {
+  text-align: justify;
+}
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  transition: transform 0.5s ease;
+
+  width: 200px;
+  height: 200px;
+}
+
+.highlight {
+  color: rgb(233 255 0 / 82%);
+  font-size: 20px;
+}
+
+.tech-list {
+  list-style-type: square;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: disclosure-closed;
+  color: rgb(233 255 0 / 82%);
+  font-size: 20px;
+}
+
+.tech-list li {
+  margin-bottom: 5px;
+}
+
+/* Floating profile picture */
+.profile-pic img {
+  border-radius: 10px;
+  animation: float 3s ease-in-out infinite;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 30px rgb(233 255 0 / 82%);
+  transition: transform 0.5s ease;
+  background: linear-gradient(45deg, black, transparent);
+  margin: 20px 0;
+}
+
+.profile-pic:hover img {
+  transform: scale(1.2);
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-pic img {
+    width: 200px; /* Extra large size for XL devices */
+    height: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-pic img {
+    width: 200px; /* Extra large size for XL devices */
+    height: 200px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .profile-pic img {
+    width: 250px; /* Max size for very large screens */
+    height: 250px;
+  }
+}
+
+// .awards-recommendations {
+//   width: 45%;
+//   color: #fff;
+// }
+
+// /* Starry Night Background */
+// .starry-night {
+//   background: url("../../../assets/images/starry_night.jpg") no-repeat center
+//     center/cover;
+//   padding: 20px;
+//   color: #fff;
+//   position: relative;
+// }
+
+// /* Styles for the constellation section */
+// .constellation-wrapper {
+//   position: relative;
+//   height: 300px;
+//   background: url("../../../assets/images/starry_night.jpg") no-repeat center
+//     center;
+//   background-size: cover;
+//   border-radius: 10px;
+//   padding: 20px;
+//   margin-bottom: 30px;
+// }
+
+// .constellation {
+//   position: relative;
+// }
+
+// .star {
+//   position: absolute;
+//   width: 10px;
+//   height: 10px;
+//   background-color: white;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   transition: transform 0.3s ease;
+// }
+
+// .star:hover {
+//   transform: scale(1.5);
+//   background-color: yellow;
+// }
+
+// .lines {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   pointer-events: none;
+// }
+
+// .award-details {
+//   background: rgba(0, 0, 0, 0.8);
+//   color: white;
+//   padding: 15px;
+//   border-radius: 10px;
+//   position: relative;
+//   margin-top: 20px;
+//   width: 100%;
+//   animation: fadeIn 0.5s ease;
+// }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// /* Sticky Note Styles */
+// .sticky-note {
+//   width: 100%;
+//   background-color: #fff700;
+//   border-radius: 10px;
+//   padding: 15px;
+//   margin: 10px 0;
+
+//   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+//   cursor: grab;
+//   transition: box-shadow 0.2s;
+//   position: relative;
+//   user-select: none;
+//   color: black;
+// }
+
+// .sticky-note:active {
+//   cursor: grabbing;
+//   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+// }
+
+// .sticky-note p {
+//   font-size: 16px;
+//   margin: 0;
+// }

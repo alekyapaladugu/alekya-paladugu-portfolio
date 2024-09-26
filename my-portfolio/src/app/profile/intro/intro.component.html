@@ -1,74 +1,101 @@
 <div class="profile-page">
   <div class="wrapper">
     <div class="page-header page-header-small" filter-color="green">
-      <div
-        class="page-header-image"
-        data-parallax="true"
-        style="background-image: url('assets/images/intro.jpg')"
-      ></div>
+      <div class="page-header-image intro-section" data-parallax="true"></div>
       <div class="container">
         <div class="content-center">
-          <div class="cc-profile-image">
-            <img src="assets/images/profile-pic.jpg" alt="Image" />
-          </div>
-          <h1 class="h2 title">Alekya Paladugu</h1>
-          <p class="category text-white">Software Developer</p>
-          <a
-            class="btn btn-primary smooth-scroll mr-2 aos-init aos-animate"
-            href="#contact"
-            data-aos="zoom-in"
-            data-aos-anchor="data-aos-anchor"
-            >Hire Me</a
-          >
-          <a
-            class="btn btn-primary aos-init aos-animate"
-            href="{{ cvUrl }}"
-            target="_blank"
-            data-aos="zoom-in"
-            data-aos-anchor="data-aos-anchor"
-            >Download CV</a
-          >
-        </div>
-      </div>
-      <div class="section">
-        <div class="container">
-          <div class="button-container">
-            <a
-              class="btn btn-default btn-round btn-lg btn-icon"
-              href="https://www.facebook.com/alekya.paladugu"
-              target="_blank"
-              rel="tooltip"
-              title="Follow me on Facebook"
+          <div class="intro">
+            <h1
+              class="heading intro-text"
+              data-aos="fade-in"
+              data-aos-duration="1000"
             >
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a
-              class="btn btn-default btn-round btn-lg btn-icon"
-              href="https://www.instagram.com/alekya_paladugu/?hl=en"
-              target="_blank"
-              rel="tooltip"
-              title="Follow me on Instagram"
+              Hi, my name is
+            </h1>
+
+            <h2
+              class="heading"
+              data-aos="fade-in"
+              data-aos-duration="1200"
+              [attr.data-aos-delay]="300"
             >
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a
-              class="btn btn-default btn-round btn-lg btn-icon"
-              href="https://www.linkedin.com/in/alekyapaladugu/"
-              target="_blank"
-              rel="tooltip"
-              title="Follow me on Linkedin"
+              Alekya Paladugu
+            </h2>
+            <h2
+              class="heading"
+              data-aos="fade-in"
+              data-aos-duration="1400"
+              [attr.data-aos-delay]="500"
             >
-              <i class="fa fa-linkedin"></i>
-            </a>
-            <a
-              class="btn btn-default btn-round btn-lg btn-icon"
-              href="https://github.com/alekyapaladugu"
-              target="_blank"
-              rel="tooltip"
-              title="Follow me on Github"
+              I build things for the web.
+            </h2>
+
+            <h3
+              class="heading"
+              data-aos="fade-in"
+              data-aos-duration="1600"
+              [attr.data-aos-delay]="800"
             >
-              <i class="fa fa-github"></i>
-            </a>
+              I'm a <span class="intro-text" id="typed-text"></span>
+            </h3>
+
+            <div
+              class="profile-action-btns"
+              data-aos="fade-in"
+              data-aos-duration="1800"
+              [attr.data-aos-delay]="1200"
+            >
+              <a
+                class="btn btn-primary smooth-scroll mr-3 aos-init aos-animate"
+                href="#contact"
+                data-aos="zoom-in"
+                data-aos-anchor="data-aos-anchor"
+                >Hire Me</a
+              >
+              <a
+                class="btn btn-primary aos-init aos-animate"
+                href="{{ cvUrl }}"
+                target="_blank"
+                data-aos="zoom-in"
+                data-aos-anchor="data-aos-anchor"
+                >Resume</a
+              >
+            </div>
+            <!-- <div class="social-icons">
+              <a
+                href="https://www.facebook.com/alekya.paladugu"
+                target="_blank"
+                rel="tooltip"
+                title="Follow me on Facebook"
+              >
+                <i class="fa fa-facebook icon-glow" style="font-size: 24px"></i>
+              </a>
+
+              <a
+                href="https://www.instagram.com/alekya_paladugu/?hl=en"
+                target="_blank"
+                rel="tooltip"
+                title="Follow me on Instagram"
+              >
+                <i class="fa fa-instagram icon-glow"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/alekyapaladugu/"
+                target="_blank"
+                rel="tooltip"
+                title="Follow me on Linkedin"
+              >
+                <i class="fa fa-linkedin icon-glow"></i>
+              </a>
+              <a
+                href="https://github.com/alekyapaladugu"
+                target="_blank"
+                rel="tooltip"
+                title="Follow me on Github"
+              >
+                <i class="fa fa-github icon-glow"></i>
+              </a>
+            </div> -->
           </div>
         </div>
       </div>
