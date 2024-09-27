@@ -48,10 +48,12 @@
   opacity: 0.85;
 }
 
-.timeline-content:hover {
-  opacity: 1;
-  + .timeline-img {
+.timeline-block:hover {
+  .timeline-img {
     background: #00bfff;
+  }
+  .timeline-content {
+    opacity: 1;
   }
 }
 
@@ -65,6 +67,7 @@
 
 .company_link {
   color: #378c3f;
+  font-weight: bold;
   &:hover {
     color: #3db548;
   }
@@ -132,10 +135,9 @@
     position: absolute;
     transform: translateY(-50%);
     font-size: 14px;
-    color: #000;
     z-index: 1;
     left: 55%;
-    top: 60px;
+    top: 45px;
   }
 }
 
@@ -158,10 +160,9 @@
     position: absolute;
     transform: translateY(-50%);
     font-size: 14px;
-    color: #000;
     z-index: 1;
     right: 55%;
-    top: 60px;
+    top: 45px;
   }
 }
 
@@ -184,21 +185,17 @@
 }
 .job-desc {
   margin: 1em 0;
+  padding-left: inherit;
+  list-style-type: square;
+  list-style-type: disclosure-closed;
+  color: #051a42;
+  // font-size: 20px;
 }
 
-@media (max-width: 480px) {
-  .timeline-img {
-    width: 35px;
-    height: 35px;
-  }
-  .sprite {
-    width: 20px;
-    height: 20px;
-  }
-  .date {
-    color: #051a42 !important;
-  }
+.timeline-content-block {
+  position: relative;
 }
+
 /* Responsive stacking */
 @media (max-width: 1000px) {
   .timeline {
@@ -231,8 +228,9 @@
   .timeline-block:nth-child(even) {
     .date {
       top: auto;
-      bottom: 30px;
-      left: 9%;
+      left: 3%;
+      right: 0;
+      bottom: 15px;
       padding-left: 20px;
       font-size: 14px !important;
     }
@@ -241,8 +239,9 @@
   .timeline-block:nth-child(odd) {
     .date {
       top: auto;
-      bottom: 30px;
-      left: 9%;
+      left: 3%;
+      right: 0;
+      bottom: 15px;
       padding-left: 20px;
       font-size: 14px !important;
     }
@@ -261,10 +260,25 @@
   }
 
   .timeline-img {
-    left: 5px; /* Align icon to the left */
+    left: -3px; /* Align icon to the left */
   }
 
   .date {
     color: #051a42 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-img {
+    left: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-block:nth-child(odd),
+  .timeline-block:nth-child(even) {
+    .date {
+      left: 5%;
+    }
   }
 }
