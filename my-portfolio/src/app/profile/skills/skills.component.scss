@@ -1,0 +1,108 @@
+.skills-section {
+  color: #fff;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .skills-grid {
+    justify-content: center;
+  }
+}
+.skills-info {
+  background-size: cover !important;
+}
+
+.background-blur {
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Inherit the background */
+  filter: blur(2px); /* Apply blur effect */
+  z-index: 1; /* Place it behind other content */
+}
+.background-overlay {
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay (adjust opacity as needed) */
+  z-index: 2; /* Place it above the blur */
+}
+/* Ensure the content appears above the blurred background */
+* {
+  position: relative; /* Make child elements positioned above the blur */
+  z-index: 2; /* Ensure content is above the blur */
+}
+
+.skill-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  // max-width: 100px;
+}
+
+.cc-skills {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.progress-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #21221b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.title {
+  font-size: 2.71rem;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+.icon-img {
+  width: 60%;
+  height: auto;
+  position: absolute;
+}
+.blurred {
+  filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+.percentage-text {
+  position: absolute; /* Overlay on top of the icon */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white; /* Text color */
+  font-weight: 700; /* Make text bold */
+  z-index: 2; /* Ensures the text is above everything */
+  font-size: 20px;
+}
+.list-block {
+  list-style-type: disclosure-closed;
+}
+.list-item {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}

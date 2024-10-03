@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tag } from 'src/app/_models/Tag';
 
 @Component({
   selector: 'app-experience',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
   constructor() {}
+  tags = [] as Tag[];
 
   ngOnInit(): void {}
 }

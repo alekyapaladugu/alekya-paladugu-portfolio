@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap/modal';
 import { Project } from 'src/app/_models/Project';
-import { ProjectModalComponent } from 'src/app/project-modal/project-modal.component';
 
 @Component({
   selector: 'app-project-card',
@@ -10,21 +8,34 @@ import { ProjectModalComponent } from 'src/app/project-modal/project-modal.compo
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project = {} as Project;
-  bsModalRef?: BsModalRef;
+  showGitHUb = false;
 
-  constructor(private modalService: BsModalService) {}
+  constructor() {}
 
-  openProjectModal() {
-    const modalOptions: ModalOptions = {
-      class: 'modal-lg',
-      initialState: {
-        project: this.project,
-      },
-    };
-    this.bsModalRef = this.modalService.show(
-      ProjectModalComponent,
-      modalOptions
-    );
+  showGitHubLink() {
+    if (this.isDesktop()) {
+      this.showGitHUb = true;
+    }
+  }
+
+  hideGitHubLink() {
+    if (this.isDesktop()) {
+      this.showGitHUb = false;
+    }
+  }
+
+  toggleGitHubLink() {
+    if (this.isMobileOrTablet()) {
+      this.showGitHUb = !this.showGitHUb;
+    }
+  }
+
+  private isDesktop(): boolean {
+    return window.innerWidth > 1024; // Desktop devices
+  }
+
+  private isMobileOrTablet(): boolean {
+    return window.innerWidth <= 1024; // Mobile and tablet devices
   }
 
   ngOnInit(): void {}

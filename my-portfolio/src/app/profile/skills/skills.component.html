@@ -1,7 +1,141 @@
-<div class="section" id="skill">
-  <div class="container">
-    <div class="h4 text-center mb-4 title">Skills</div>
-    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<div class="section skills-section" id="skill">
+  <div
+    class="skills-info"
+    [ngStyle]="{
+      background: 'url(assets/images/exp.jpg)',
+      'background-position': 'center'
+    }"
+  >
+    <div class="background-blur"></div>
+    <div class="background-overlay"></div>
+    <div class="container cc-skills">
+      <div class="h4 mb-4 title">Skills</div>
+
+      <div class="row">
+        <!-- Development Section -->
+        <div
+          class="col-md-7 col-sm-12 pt-5"
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+        >
+          <div class="h5 text-left">
+            <span class="sprite dev"></span> <span>Development</span>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item" *ngFor="let skill of developmentSkills">
+              <div class="skill-circle">
+                <div
+                  class="progress-circle"
+                  [ngStyle]="{ '--percent': skill.percentage }"
+                  (mouseover)="showProgress(skill)"
+                  (mouseleave)="hideProgress()"
+                  (click)="toggleSkill(skill)"
+                >
+                  <circle-progress
+                    *ngIf="currentSkill === skill"
+                    [percent]="skill.percentage"
+                    [radius]="50"
+                    [outerStrokeWidth]="5"
+                    [backgroundStrokeWidth]="0"
+                    [outerStrokeColor]="'rgba(244, 185, 8, 0.8)'"
+                    [showInnerStroke]="false"
+                    [animation]="true"
+                    [animationDuration]="300"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showZeroOuterStroke]="false"
+                    [startFromZero]="true"
+                  >
+                  </circle-progress>
+                  <img
+                    [ngClass]="{ blurred: currentSkill === skill }"
+                    class="icon-img"
+                    [src]="skill.icon"
+                    alt="{{ skill.name }} icon"
+                  />
+                  <div class="percentage-text" *ngIf="currentSkill === skill">
+                    {{ skill.percentage }}%
+                  </div>
+                </div>
+              </div>
+              <p>{{ skill.name }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools Section -->
+        <div
+          class="col-md-5 col-sm-12 pt-5"
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+        >
+          <div class="row">
+            <div class="h5 text-left">
+              <span class="sprite tools"></span> <span>Tools</span>
+            </div>
+            <div class="skills-grid">
+              <div class="skill-item" *ngFor="let skill of toolsSkills">
+                <!-- <div class="skill-circle"> -->
+                <div
+                  class="progress-circle"
+                  (mouseover)="showProgress(skill)"
+                  (mouseleave)="hideProgress()"
+                  (click)="toggleSkill(skill)"
+                >
+                  <circle-progress
+                    *ngIf="currentSkill === skill"
+                    [percent]="skill.percentage"
+                    [radius]="50"
+                    [outerStrokeWidth]="5"
+                    [backgroundStrokeWidth]="0"
+                    [outerStrokeColor]="'rgba(244, 185, 8, 0.8)'"
+                    [showInnerStroke]="false"
+                    [animation]="true"
+                    [animationDuration]="300"
+                    [showUnits]="false"
+                    [showTitle]="false"
+                    [showSubtitle]="false"
+                    [showZeroOuterStroke]="false"
+                    [startFromZero]="true"
+                  >
+                  </circle-progress>
+                  <img
+                    [ngClass]="{ blurred: currentSkill === skill }"
+                    class="icon-img"
+                    [src]="skill.icon"
+                    alt="{{ skill.name }} icon"
+                  />
+                  <div class="percentage-text" *ngIf="currentSkill === skill">
+                    {{ skill.percentage }}%
+                  </div>
+                </div>
+                <!-- </div> -->
+                <p>{{ skill.name }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col-md-8 col-sm-12">
+              <div class="h5 text-left">
+                <span class="sprite knowledge"></span> <span>Knowledge</span>
+              </div>
+              <ul class="list-block">
+                <li class="list-item text-left">UI Components</li>
+                <li class="list-item text-left">Single Page Application</li>
+                <li class="list-item text-left">State Management</li>
+                <li class="list-item text-left">CSS Detangling</li>
+                <li class="list-item text-left">ECMAScript 6</li>
+                <li class="list-item text-left">Usability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="card-body">
         <div class="row">
           <div class="col-md-6" *ngFor="let skill of skills">
@@ -25,6 +159,7 @@
           </div>
         </div>
       </div>
+    </div> -->
     </div>
   </div>
 </div>

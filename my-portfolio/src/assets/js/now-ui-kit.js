@@ -92,6 +92,15 @@ $(window).on("resize", function () {
   nowuiKit.initNavbarImage();
 });
 
+$(document).on("click", ".nav-link", function () {
+  if (nowuiKit.misc.navbar_menu_visible == 1) {
+    $("html").removeClass("nav-open");
+    nowuiKit.misc.navbar_menu_visible = 0;
+    $("#bodyClick").remove();
+    $(".navbar-toggler").removeClass("toggled");
+  }
+});
+
 $(document).on("click", ".navbar-toggler", function () {
   $toggle = $(this);
 

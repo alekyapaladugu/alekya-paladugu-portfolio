@@ -1,0 +1,71 @@
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-top: 20px;
+}
+.card .card-body {
+  min-height: 0;
+}
+
+.cc-education {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.cc-education .cc-education-header {
+  padding: 20px;
+}
+.section-border {
+  border-right: 3px solid black;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .section-border {
+    border-bottom: 3px solid black;
+  }
+}
+a {
+  font-size: 1.714em;
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+.education-info {
+  background-size: cover !important;
+}
+.edu-desc {
+  margin-top: 10px;
+}
+.background-blur {
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Inherit the background */
+  filter: blur(2px); /* Apply blur effect */
+  z-index: 1; /* Place it behind other content */
+}
+.background-overlay {
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay (adjust opacity as needed) */
+  z-index: 2; /* Place it above the blur */
+}
+/* Ensure the content appears above the blurred background */
+* {
+  position: relative; /* Make child elements positioned above the blur */
+  z-index: 2; /* Ensure content is above the blur */
+}
+.title {
+  font-size: 2.71rem;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}

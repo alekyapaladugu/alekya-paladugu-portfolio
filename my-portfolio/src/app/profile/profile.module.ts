@@ -12,9 +12,9 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCardComponent } from './projectCard/project-card/project-card.component';
-import { ProjectModalComponent } from '../project-modal/project-modal.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -28,9 +28,16 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     ContactComponent,
     ProjectsComponent,
     ProjectCardComponent,
-    ProjectModalComponent,
   ],
   imports: [
+    NgCircleProgressModule.forRoot({
+      radius: 60,
+      outerStrokeWidth: 8,
+      outerStrokeColor: '#007bff',
+      innerStrokeColor: '#e7e8ea',
+      animation: true,
+      animationDuration: 300,
+    }),
     CarouselModule.forRoot(),
     CommonModule,
     FormsModule,

@@ -222,8 +222,8 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
 }
 
 .btn-primary {
-  background-color: rgb(233 255 0 / 82%);
-  color: #000;
+  background-color: rgb(21, 70, 95);
+  color: white;
 }
 
 .btn-primary:hover,
@@ -1645,6 +1645,7 @@ p {
 
 .title {
   font-weight: 700;
+  color: white;
 }
 
 .title.title-up {
@@ -1665,9 +1666,21 @@ p {
   font-weight: 700;
   color: #9a9a9a;
 }
+.background-primary {
+  background: rgba(244, 185, 8) !important;
+}
 
 .text-primary {
-  color: #378c3f !important;
+  color: rgba(244, 185, 8) !important;
+}
+a.text-hover {
+  &:hover, &:focus {
+    color: rgb(244, 141, 8) !important;
+  }
+}
+
+.custom-box-shadow {
+  box-shadow: 1px 1px 10px rgba(244, 185, 8) !important;
 }
 
 .text-info {
@@ -1696,11 +1709,12 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  background-color: #282c34;
 }
 
 .main {
   position: relative;
-  background: #ffffff;
+
 }
 
 /* Animations */
@@ -2068,6 +2082,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   line-height: 1.625rem;
+  width: 30px;
 }
 
 .navbar .navbar-toggler {
@@ -3361,6 +3376,7 @@ img {
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
 }
 
 .card .card-body {
@@ -3499,7 +3515,7 @@ img {
 .section {
   padding: 70px 0;
   position: relative;
-  background: #ffffff;
+  background-color: #1b1b1b;
 }
 
 .section .row + .category {
@@ -3673,10 +3689,10 @@ img {
       linear,
       left top,
       left bottom,
-      from(#378c3f),
+      from(#989b32),
       color-stop(80%, #000)
     );
-    background: linear-gradient(#378c3f 0%, #000 80%);
+    background: linear-gradient(#989b32 0%, #000 80%);
     /* Standard syntax (must be last) */
     opacity: 0.76;
     filter: alpha(opacity=76);
@@ -5339,4 +5355,39 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0;
+}
+
+
+.sprite {
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+@media (max-width: 768px) {
+  .research {
+  width: 25px;
+  height: 25px;
+  }
+}
+
+.research {
+  background-image: url("../images/briefcase.png");
+
+}
+
+.dev {
+  background-image: url("../images/settings.png");
+  margin-right: 10px;
+}
+
+.tools {
+  background-image: url("../images/repair-tools.png");
+  margin-right: 10px;
+  margin-left: 15px;
+}
+.knowledge {
+  background-image: url("../images/light-bulb.png");
+  margin-right: 10px;
 }

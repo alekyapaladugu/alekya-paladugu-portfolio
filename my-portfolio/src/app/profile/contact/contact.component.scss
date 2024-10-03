@@ -1,0 +1,37 @@
+#contact {
+  color: black;
+}
+.footer {
+  padding: 20px;
+}
+.line {
+  border-top: 1px solid black;
+  margin-bottom: 0;
+}
+.cc-contact-information {
+  position: relative;
+}
+.background-blur {
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Inherit the background */
+  filter: blur(5px); /* Apply blur effect */
+  z-index: 1; /* Place it behind other content */
+}
+.background-overlay {
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay (adjust opacity as needed) */
+  z-index: 2; /* Place it above the blur */
+}
+/* Ensure the content appears above the blurred background */
+* {
+  position: relative; /* Make child elements positioned above the blur */
+  z-index: 2; /* Ensure content is above the blur */
+}

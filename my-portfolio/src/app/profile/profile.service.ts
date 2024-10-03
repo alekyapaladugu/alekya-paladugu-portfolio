@@ -102,49 +102,31 @@ export class ProfileService {
   projects: Project[] = [
     {
       id: 0,
-      name: 'FlowMail',
-      summary:
-        'Developed an email assistant outlook add-in to support students in drafting academically appropriate emails.',
+      title: 'FlowMail',
       description:
-        'I developed an Outlook email assistant add-in designed to help students draft academically appropriate emails with greater ease and professionalism. The project was aimed at improving communication between students and academic staff by providing assistance in structuring emails, ensuring proper tone, and responding to common queries.  Leveraged Large Language Models (LLMs) to suggest and generate well-structured email drafts based on the context provided by the student. This feature helped students write clear and formal emails when addressing professors, requesting information, or following up on academic matters. Provided a set of predefined templates for frequently asked questions, such as, Extensions on assignments, Inquiries about course materials. Utilized the Yeoman generator to scaffold the Outlook add-in, ensuring a streamlined development process for the add-in’s UI and core functionality. Designed an easy-to-use interface within Outlook where students could choose templates, input relevant details, and let the LLM refine the language and tone of their message. Implemented features that allowed the LLM to take into account the email context, such as the subject, recipient, and specific query, to tailor suggestions and ensure the content aligns with academic norms.',
-      projectLink: 'https://github.com/alekyapaladugu/FlowMail',
-      pictures: [
-        '../../assets/images/outlook_addin.jpeg',
-        '../../assets/images/machine_learning.jpeg',
-        '../../assets/images/redis_db.jpeg',
-      ],
-      tags: [Tag.JAVASCRIPT, Tag.FLASK, Tag.LLM],
+        'I developed an Outlook email assistant add-in designed to help students draft academically appropriate emails with greater ease and professionalism. The project was aimed at improving communication between students and academic staff by providing assistance in structuring emails, ensuring proper tone, and responding to common queries.  Leveraged Large Language Models (LLMs) to suggest and generate well-structured email drafts based on the context provided by the student. Provided a set of predefined templates for frequently asked questions, such as, Extensions on assignments, Inquiries about course materials. ',
+      githubLink: 'https://github.com/alekyapaladugu/FlowMail',
+      image: '../../assets/images/flowmail.jpg',
+      technologies: [Tag.JAVASCRIPT, Tag.FLASK, Tag.LLM],
     },
     {
       id: 2,
-      name: 'Multi-Label Text Classification of toxic comment dataset',
-      summary:
-        'Designed the base model of a paper that uses Multi-label Text classification using Attention based Graph Neural Network.',
+      title: 'Multi-Label Text Classification of toxic comment dataset',
       description:
-        "I along with my peers designed and developed the base model for a research paper focusing on Multi-label Text Classification using an Attention-based Graph Neural Network (GNN). The primary objective was to classify textual data into multiple categories, leveraging the graph structure to capture relationships between labels and input text features. The attention mechanism was used to dynamically weigh the importance of different parts of the input text, improving the classification accuracy by allowing the model to focus on the most relevant sections. After building the GNN model, I further enhanced the model's performance by integrating a BERT transformer. BERT (Bidirectional Encoder Representations from Transformers) was applied to the same dataset to capture contextual information from the text more effectively. By replacing the traditional text representation with BERT embeddings, I managed to boost the base model's accuracy by 0.5%, demonstrating the powerful contextual understanding that transformers provide for natural language processing tasks.",
-      projectLink:
+        "I along with my peers designed and developed the base model for a research paper focusing on Multi-label Text Classification using an Attention-based Graph Neural Network (GNN). The primary objective was to classify textual data into multiple categories, leveraging the graph structure to capture relationships between labels and input text features.  After building the GNN model, I further enhanced the model's performance by integrating a BERT transformer. ",
+      githubLink:
         'https://github.com/alekyapaladugu/multilabel_text_classification',
-      pictures: [
-        '../../assets/images/outlook_addin.jpeg',
-        '../../assets/images/machine_learning.jpeg',
-        '../../assets/images/redis_db.jpeg',
-      ],
-      tags: [Tag.PYTHON, Tag.PYTORCH, Tag.BERT],
+      image: '../../assets/images/multi_label.png',
+      technologies: [Tag.PYTHON, Tag.PYTORCH, Tag.BERT],
     },
     {
       id: 3,
-      name: 'CRUD Operations on Redis Enterprise Cloud',
-      summary:
-        'Implemented a dashboard for showing the analysis of FIFA world cup dataset.',
+      title: 'CRUD Operations on Redis Enterprise Cloud',
       description:
         'I developed an interactive dashboard using JavaScript and Chart.js to visualize and analyze data from the FIFA World Cup dataset, while integrating a Flask backend for data management through GET and POST APIs. The project involved creating a full-stack solution where the frontend dashboard provided dynamic data visualization, and the backend enabled data persistence and CRUD operations. Integrated an ORM (Object Relational Mapping) layer to interact with a Redis database, ensuring efficient data storage and retrieval. ',
-      projectLink: 'https://github.com/alekyapaladugu/redis-backend',
-      pictures: [
-        '../../assets/images/outlook_addin.jpeg',
-        '../../assets/images/machine_learning.jpeg',
-        '../../assets/images/redis_db.jpeg',
-      ],
-      tags: [Tag.JAVASCRIPT, Tag.FLASK, Tag.REDIS],
+      githubLink: 'https://github.com/alekyapaladugu/redis-backend',
+      image: '../../assets/images/dashboard_redis.svg',
+      technologies: [Tag.JAVASCRIPT, Tag.FLASK, Tag.REDIS],
     },
   ];
 
