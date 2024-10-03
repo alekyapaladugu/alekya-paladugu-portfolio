@@ -14,15 +14,15 @@ export class ContactComponent implements OnInit {
   sendEmail() {
     emailjs
       .send(
-        'service_sq2lh14',
-        'template_h83pmyj',
+        'xxxx',
+        'xxxx',
         {
           from_name: this.model.name,
           subject: this.model.subject,
           from_email: this.model.email,
           message: this.model.message,
         },
-        'rJgc1FnNSvo8yit60'
+        'xxxx'
       )
       .then((response: EmailJSResponseStatus) => {
         console.log('Email successfully sent!', response.status, response.text);

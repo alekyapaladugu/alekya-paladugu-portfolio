@@ -244,8 +244,8 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
 }
 
 .btn-primary:hover {
-  -webkit-box-shadow: 0 3px 8px 0 rgb(233 255 0 / 82%)
-  box-shadow: 0 3px 8px 0 rgb(233 255 0 / 82%)
+  -webkit-box-shadow: 0 3px 8px 0 rgb(233 255 0 / 82%);
+  box-shadow: 0 3px 8px 0 rgb(233 255 0 / 82%);
 }
 
 .btn-primary.disabled,
@@ -272,8 +272,8 @@ fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary.active {
-  background-color: rgb(233 255 0 / 82%)
-  border-color: rgb(233 255 0 / 82%)
+  background-color: rgb(233 255 0 / 82%);
+  border-color: rgb(233 255 0 / 82%);
   cursor: default;
 }
 
@@ -1674,7 +1674,10 @@ p {
   color: rgba(244, 185, 8) !important;
 }
 a.text-hover {
-  &:hover, &:focus {
+  &:hover {
+    color: rgb(244, 141, 8) !important;
+  }
+  &:focus {
     color: rgb(244, 141, 8) !important;
   }
 }
@@ -1714,7 +1717,6 @@ body {
 
 .main {
   position: relative;
-
 }
 
 /* Animations */
@@ -3376,7 +3378,6 @@ img {
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-
 }
 
 .card .card-body {
@@ -5357,7 +5358,6 @@ a.credit {
   padding-bottom: 0;
 }
 
-
 .sprite {
   width: 35px;
   height: 35px;
@@ -5367,14 +5367,13 @@ a.credit {
 }
 @media (max-width: 768px) {
   .research {
-  width: 25px;
-  height: 25px;
+    width: 25px;
+    height: 25px;
   }
 }
 
 .research {
   background-image: url("../images/briefcase.png");
-
 }
 
 .dev {
