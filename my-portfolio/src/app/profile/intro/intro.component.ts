@@ -11,7 +11,8 @@ export class IntroComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.cvUrl = '.././assets/media/AlekyaPaladugu_resume.pdf';
+    this.cvUrl =
+      'https://drive.google.com/file/d/1G07n8rxna8EzOOTzm8aBIFH_YG8cGyq8/view?usp=sharing';
     const options = {
       strings: [
         'Software Engineer',
