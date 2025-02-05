@@ -17,7 +17,7 @@ export class IntroComponent implements OnInit {
       strings: [
         'Software Engineer',
         'Machine Learning Enthusiast',
-        "Computer Science Master's student",
+        "Computer Science Master's Graduate",
       ],
       typeSpeed: 50,
       backSpeed: 50,
