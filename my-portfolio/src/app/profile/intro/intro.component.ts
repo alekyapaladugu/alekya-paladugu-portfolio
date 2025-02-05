@@ -16,7 +16,7 @@ export class IntroComponent implements OnInit {
     const options = {
       strings: [
         'Software Engineer',
-        'Frontend Developer',
+        'Machine Learning Enthusiast',
         "Computer Science Master's student",
       ],
       typeSpeed: 50,
